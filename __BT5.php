@@ -8,11 +8,40 @@ VD:
 <?php 
     echo '<br>';
     
-    $str = "gh12cdy695m1";
-    print_r(explode(' ', $str)) ;
+    $str = "ghBG12cdy69m1A";
 
-    
-    // function largestNum ($str)
-    // {
-    //     $str = explode('', $str);
-    // }
+    function maxNum($n = [])
+    {
+        $max = $n[0];
+
+        for ($j=0; $j < sizeof($n); $j++) { 
+            if($n[$j] > $max)
+            {
+                $max = $n[$j];
+            }    
+        }
+
+        return $max;
+    }
+
+    function largestNum ($str)
+    {
+        for ($i=0; $i < strlen($str); $i++) 
+        {
+            
+            if(ord($str[$i]) <= 122 && ord($str[$i]) >= 97)
+            {
+                $str[$i] = ' ';
+            }
+            else if(ord($str[$i]) <= 90 && ord($str[$i]) >= 65)
+            {
+                $str[$i] = ' ';
+            }
+
+        }
+
+        $str = explode(' ', $str);
+        echo maxNum($str);
+    }
+
+    largestNum($str);

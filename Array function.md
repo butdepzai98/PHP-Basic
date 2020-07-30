@@ -42,6 +42,11 @@ Thêm phần tử vào đầu mảng
 
 
 ------------------------ Xóa ------------------------------
+
+#   unset($mang['key'])
+Xóa phần tử theo _key_
+
+
 #   array_pop($arr)
 Xóa đi phần tử cuối cùng trong mảng
 

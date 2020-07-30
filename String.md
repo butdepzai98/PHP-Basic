@@ -18,7 +18,7 @@ In ra mã ascii của Ký tự
 Chuyển đổi String thành mảng
 
 
-#   implode('', $mang)
+#   implode(' ', $mang)
 Chuyển đổi Mảng thành String
 
 

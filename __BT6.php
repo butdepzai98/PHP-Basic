@@ -22,6 +22,22 @@ VD:
         return $dem;
     };
 
-    for ($i=0; $i < strlen($str); $i++) { 
-        
+    function mostComChar($str)
+    {
+        //echo $str[0];
+        $max = 0;
+        $most = '';
+
+        for ($i=0; $i < strlen($str); $i++) { 
+
+            if(myCount($str[$i], $str) > $max)
+            {
+                $most = $str[$i];
+                $max = myCount($str[$i], $str);
+            }
+        }
+
+        return $most;
     }
+
+    echo mostComChar($str);
